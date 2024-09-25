@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Celtech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="normal">
+    <!-- SVG Filters -->
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+      <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+      </filter>
+    </svg>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img src="img/Logo1.jpeg" alt="Logo" />
+          </a>
+        </div>
+        <ul class="navbar-nav-left">
+          <li><a href="index.html" accesskey="h">Home</a></li>
+          <li><a href="https://www.apple.com/br/iphone/" accesskey="a">Apple</a></li>
+          <li><a href="https://www.samsung.com/br/offer/?utm_source=google&utm_medium=ppc&utm_campaign=br_pd_ppc_google_multi-multi_ecommerce_cad3-a0009-mx-institucional_text_multi-aon_paid-cdm-pfm-ID92363434203-*samsung*&utm_content=text&utm_term=samsung&cid=br_pd_ppc_google_multi-multi_ecommerce_cad3-a0009-mx-institucional_text_multi-aon_paid-cdm-pfm-ID92363434203-*samsung*&keeplink=true&gad_source=1&gclid=CjwKCAjwxNW2BhAkEiwA24Cm9PzEKoY6FUBN-40mVTCRWLht1OYxasBZjv94x3fH2_SG-oG8bBNCUhoCPyEQAvD_BwE" accesskey="t">Samsung</a></li>
+          <li><a href="https://www.motorola.com.br/?gad_source=1&gclid=CjwKCAjwxNW2BhAkEiwA24Cm9KCM5AhoSCPJV1drT2rnG-vjwSUAn3I7LncihiQDv30QAbm3Z0PNqRoCXpQQAvD_BwE" accesskey="U">Motorola</a></li>
+      </ul>      
+        <div class="cart-icon" onclick="toggleCart()" data-count="(0)" accesskey="c">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+      </div>
+    </nav>
+
+    <center>
+      <div class="carrossel">
+        <div class="container">
+          <img src="img/Slide/1.png" alt="Slide 1" />
+          <img src="img/Slide/2.png" alt="Slide 2" />
+          <img src="img/Slide/3.png" alt="Slide 3" />
+          <img src="img/Slide/4.png" alt="Slide 4" />
+          <img src="img/Slide/5.png" alt="Slide 5" />
+        </div>
+      </div>
+      <br>
+      <div vw class="enabled">
+        <a href="#" accesskey="v" onclick="document.querySelector('[vw-access-button]').click(); return false;">
+          <div vw-access-button class="active"></div>
+        </a>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+        (function(d){
+            var s = d.createElement("script");
+            s.setAttribute("data-account", "INSIRA_SEU_CÓDIGO_USERWAY_AQUI");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document);
+      </script>
+    </center>
+    <br>
+    <br>
+    <div class="container-page">
+      <div class="product-card">
+        <img src="img/IPHONE XR.jpg" alt="Iphone XR 64GB" />
+        <h2>Iphone XR 64GB</h2>
+        <p>R$ 883,15</p>
+        <button class="buy-btn" onclick="addToCart('Iphone XR 64GB', 'R$ 883,15')" accesskey="i"><i class="fas fa-cart-plus"></i> Comprar</button>
+      </div>
+      <div class="product-card">
+        <img src="img/S21.jpg" alt="Samsung Galaxy S21 FE 128GB" />
+        <h2>Samsung Galaxy S21 FE 128GB</h2>
+        <p>R$ 891,65</p>
+        <button class="buy-btn" onclick="addToCart('Samsung Galaxy S21 FE 128GB', 'R$ 891,65')" accesskey="s"><i class="fas fa-cart-plus"></i> Comprar</button>
+      </div>
+      <div class="product-card">
+        <img src="img/30neo.jpg" alt="Motorola Edge 30 Neo 256GB" />
+        <h2>Motorola Edge 30 Neo 256GB</h2>
+        <p>R$ 859,00</p>
+        <button class="buy-btn" onclick="addToCart('Motorola Edge 30 Neo 256GB', 'R$ 859,00')" accesskey="m"><i class="fas fa-cart-plus"></i> Comprar</button>
+      </div>
+      <div class="product-card">
+        <img src="img/A53.jpg" alt="Samsung Galaxy S53 128GB" />
+        <h2>Samsung Galaxy S53 128GB</h2>
+        <p>R$ 636,65</p>
+        <button class="buy-btn" onclick="addToCart('Samsung Galaxy S53 128GB', 'R$ 636,65')" accesskey="g"><i class="fas fa-cart-plus"></i> Comprar</button>
+      </div>
+    </div>
+
+    <div class="cart-panel" id="cart-panel">
+      <button class="close-panel" onclick="toggleCart()" accesskey="x">Fechar</button>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Produtos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+      <button class="finalize-btn" onclick="finalizePurchase()" accesskey="p">Finalizar Compra</button>
+    </div>
+
+    <br>
+    <br>
+    <div>
+      <div class="divider"></div>
+      <footer class="footer">
+        <div class="footer-container">
+          <p>© 2024 Celtech. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Slider functionality
+      const box = document.querySelector(".container");
+      const imagens = document.querySelectorAll(".container img");
+
+      let contador = 0;
+
+      function slider() {
+        contador++;
+
+        if (contador > imagens.length - 1) {
+          contador = 0;
+        }
+
+        box.style.transform = `translateX(${-contador * 100}%)`;
+      }
+
+      setInterval(slider, 2000);
+
+      let cartCount = 0;
+      let cartItems = [];
+
+      function addToCart(productName, productPrice) {
+        cartCount++;
+        document.querySelector('.cart-icon').setAttribute('data-count', `(${cartCount})`);
+
+        cartItems.push({ name: productName, price: productPrice });
+        updateCartTable();
+      }
+
+      function updateCartTable() {
+        const tableBody = document.querySelector('#cart-table tbody');
+        tableBody.innerHTML = '';
+
+        cartItems.forEach(item => {
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${item.name}</td><td>${item.price}</td>`;
+          tableBody.appendChild(row);
+        });
+      }
+
+      function toggleCart() {
+        const cartPanel = document.getElementById('cart-panel');
+        if (cartPanel.style.display === 'block') {
+          cartPanel.style.display = 'none';
+        } else {
+          cartPanel.style.display = 'block';
+        }
+      }
+
+      function finalizePurchase() {
+        alert('Compra finalizada!'); // Adicione a lógica de finalização aqui
+      }
+    </script>
+  </body>
+</html>
